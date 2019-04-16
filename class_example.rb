@@ -10,4 +10,7 @@ class MethodMan
 end
 
 h = {"this" => [1,2,3,4,5,6], "that" => ['here', 'there', 'everywhere'], :other => 100}
-puts MethodMan.new(h)
+c = MethodMan.new(h)
+puts c.this
+puts c.that
+puts c.other
