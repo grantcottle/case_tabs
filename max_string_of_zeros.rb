@@ -10,6 +10,7 @@ def zeros_count(n)
   
     binary_arr.each_with_index do |num, i|
         if num =="1"
+            # find index difference of current "1" and previous "1" then compare with previous current max
             current_max = [current_max, i - previous_1-1].max
             previous_1 = i
         end
