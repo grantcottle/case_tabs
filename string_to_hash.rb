@@ -6,7 +6,7 @@
 
 
 # things to consider:
-# 1) unbalnaced brackets
+# 1) unbalanced brackets
 # 2) wrap keys and values in quotes 
 # 3) replace colon with hash rockets
 
