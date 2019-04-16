@@ -1,5 +1,7 @@
 # Casetabs Twitter Feed
 
+<img width="1092" alt="Screen Shot 2019-04-16 at 8 23 19 AM" src="https://user-images.githubusercontent.com/17211643/56227392-34aa9c00-602a-11e9-98ca-94b426cdfdba.png">
+
 
 ## Installation
     bundle install
