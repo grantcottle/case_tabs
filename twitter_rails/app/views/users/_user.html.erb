@@ -1,0 +1,42 @@
+<!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src=<%=@user.profile_banner_url%> style="width:100%" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+            <h2><%= @user.name %></h2>
+          </div>
+          <div class="w3-display-bottomright w3-container w3-third">
+            <img class="w3-circle" src=<%=@user.profile_image_url%> style="width:100%" alt="Avatar">
+          </div>
+        </div>
+        <div class="w3-container">
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Surgery Scheduling</p>
+          <p><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i><%= @user.location%></p>
+          
+
+          <hr>
+
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Stats</b></p>
+          <p>Tweets</p>
+          <div>
+            <%=@user.tweets_count %>
+          </div>
+          <p>Following</p>
+          <div>
+          <%=@user.followers_count%>
+          </div>
+          <p>Followers</p>
+          <div>
+            <%=@user.friends_count%>
+          </div>
+          
+          <br>
+
+          
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>

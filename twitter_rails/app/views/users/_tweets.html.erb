@@ -1,0 +1,31 @@
+<!-- Right Column -->
+<div class="w3-twothird">
+  <div class="w3-container w3-card w3-white w3-margin-bottom">
+    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-twitter fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Tweets</h2>
+    <div class="w3-container">
+      <!--Tweet Feed -->
+      <ul>
+        <% @tweets.each do |tweet|%>
+          <% cache tweet do %>
+            <h5 class="w3-opacity"><b></b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><%= tweet.created_at.in_time_zone %></h6>
+            <p><%= tweet.text%></p>
+            <% if tweet.user_mentions.present? %>
+            <!-- Trigger/Open the Modal -->
+            <button onclick="document.getElementById('id01').style.display='block'"
+class="w3-button">Open Modal</button>
+            <!-- The Modal -->
+            <%= render "users/user_modal"%>
+            <% end %>
+
+            <span><a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Likes"><i class="fa fa-heart"></i></a><%= tweet.favorite_count%></span>
+            <span><a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Retreets"><i class="fa fa-refresh"></i></a><%= tweet.retweet_count%></span>
+            <hr>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+    <!--End Tweet Feed -->
+  </div>
+  <!-- End Right Column -->
+</div>
