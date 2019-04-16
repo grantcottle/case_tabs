@@ -1,21 +1,20 @@
 
 def zeros_count(n)
+    # base casse if n is zero or is a product of 2
+    return 0 if n.equal?(0) || n.to_s(2).count('1').equal?(1)
     binary_number = n.to_s(2)
     binary_arr = binary_number.split('')
 
-    count = 0
-
-    result = 0
-
-    (0..binary_arr.length).each do |i|
-        if binary_arr[i] == "1"
-            count = 0
-        else
-            count += 1
-            result = [result, count].max
+    current_max = 0
+    previous_1 = 0
+  
+    binary_arr.each_with_index do |num, i|
+        if num =="1"
+            current_max = [current_max, i - previous_1-1].max
+            previous_1 = i
         end
     end
-    result
+    current_max
 end
 
 n=1041
