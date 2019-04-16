@@ -1,6 +1,6 @@
 
 def zeros_count(n)
-    # base casse if n is zero or is a product of 2
+    # base case if n is zero or is a product of 2
     return 0 if n.equal?(0) || n.to_s(2).count('1').equal?(1)
     binary_number = n.to_s(2)
     binary_arr = binary_number.split('')
